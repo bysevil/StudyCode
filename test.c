@@ -1,11 +1,8 @@
 #include<stdio.h>
 
-int sds(int arr[]){
-    printf("%d",sizeof(arr));
-}
-
 int main() {
-    int arr[] = {0,1,2,3};
-    printf("%d\n",sizeof(arr));
-    sds(arr);
+    int flag[2][2] = {1,2,3,4};
+    for(int i =0;i< 4;i++)
+        printf("%d ",flag[i]);
+    return 0;
 }
