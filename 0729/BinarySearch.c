@@ -1,5 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 
-#include<stdio.h>
+ #include<stdio.h>
 
 int bin_search(int* arr, int left, int right, int key) {
     while (left <= right) {
