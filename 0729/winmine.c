@@ -137,12 +137,23 @@ void game() {
 
 int main() {
     int select;
-    while(1){
+    do{
         menu(); //打印菜单
         scanf("%d", &select); // 输入选择判断继续游戏还是结束游戏
-        if (select == 0) break;
-        else if (select == 1) game();
-        else printf("输入有误，重新输入");
-    }
+        switch (select){
+        case 1:
+            system("CLS");
+            printf("加载中，请等待游戏开始\n");
+            game();
+            break;
+        case 0:
+            system("CLS");
+            printf("游戏退出");
+            break;
+        default:
+            printf("输入有误，重新输入");
+            break;
+        }
+    }while(select);
     return 0;
 }
