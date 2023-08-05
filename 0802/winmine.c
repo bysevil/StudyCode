@@ -4,7 +4,7 @@
 #include<conio.h>
 #include<windows.h>
 
-//²âÊÔÓÃ£¬´òÓ¡mineÊı×é
+//æµ‹è¯•ç”¨ï¼Œæ‰“å°mineæ•°ç»„
 void test(int x, int y, int mine[101][101]) {
     for (int i = 0; i <= x; i++) {
         for (int j = 0; j <= y; j++) {
@@ -14,9 +14,9 @@ void test(int x, int y, int mine[101][101]) {
     }
     printf("***********************\n");
 }
-//Ê§°ÜÊ±£¬´òÓ¡mineÊı×é
+//å¤±è´¥æ—¶ï¼Œæ‰“å°mineæ•°ç»„
 void print(int x, int y, int mine[101][101]) {
-    printf("*********É¨À×Ê§°Ü**********\n");
+    printf("*********æ‰«é›·å¤±è´¥**********\n");
     for (int i = 0; i <= x; i++) {
         for (int j = 0; j <= y; j++) {
             if (i == 0) printf("%d ", j);
@@ -27,45 +27,45 @@ void print(int x, int y, int mine[101][101]) {
     }
 }
 
-//´òÓ¡²Ëµ¥½çÃæ
+//æ‰“å°èœå•ç•Œé¢
 void menu(int x, int y, int nummine) {
-    printf("-----------É¨À×------------\n");
-    printf(" ÆåÅÌ´óĞ¡:%dx%d µØÀ×Êı:%d \n", x, y, nummine);
+    printf("-----------æ‰«é›·------------\n");
+    printf(" æ£‹ç›˜å¤§å°:%dx%d åœ°é›·æ•°:%d \n", x, y, nummine);
     printf("---------------------------\n");
-    printf("********1. ¿ªÊ¼ÓÎÏ·********\n");
-    printf("********2. ÓÎÏ·ÉèÖÃ********\n");
-    printf("********0. ÍË³öÓÎÏ·********\n");
+    printf("********1. å¼€å§‹æ¸¸æˆ********\n");
+    printf("********2. æ¸¸æˆè®¾ç½®********\n");
+    printf("********0. é€€å‡ºæ¸¸æˆ********\n");
     printf("***************************\n");
-    printf("ÇëÑ¡Ôñ:>");
+    printf("è¯·é€‰æ‹©:>");
 }
 
-//ÉèÖÃÆåÅÌ´óĞ¡
+//è®¾ç½®æ£‹ç›˜å¤§å°
 void setxy(int* x, int* y) {
     system("CLS");
     while (1) {
-        printf("ÇëÉèÖÃÆåÅÌµÄ´óĞ¡(ĞĞÁĞ·Ö±ğÉèÖÃ£¬ÒÔ¿Õ¸ñ·Ö¸ô¡£ÖµÔÚ1µ½99Ö®¼ä):>");
+        printf("è¯·è®¾ç½®æ£‹ç›˜çš„å¤§å°(è¡Œåˆ—åˆ†åˆ«è®¾ç½®ï¼Œä»¥ç©ºæ ¼åˆ†éš”ã€‚å€¼åœ¨1åˆ°99ä¹‹é—´):>");
         scanf("%d %d", x, y);
         if (*x < 100 && *x>0 && *y < 100 && *y>0) break;
         else {
             system("CLS");
-            printf("ÊäÈëÓĞÎó£¬ÖØĞÂÊäÈë;\n");
+            printf("è¾“å…¥æœ‰è¯¯ï¼Œé‡æ–°è¾“å…¥;\n");
         }
     }
 }
 
-//ÉèÖÃµØÀ×Êı
+//è®¾ç½®åœ°é›·æ•°
 void setnummine(int* nummine, int* x, int* y) {
     system("CLS");
     while (1) {
-        printf("ÇëÉèÖÃµØÀ×Êı:>");
+        printf("è¯·è®¾ç½®åœ°é›·æ•°:>");
         scanf("%d", nummine);
         if (*nummine > *x * *y) {
             system("CLS");
-            printf("µØÀ×ÊıÌ«¶àÁË£¬ÆåÅÌ·Å²»ÏÂÀ²,ÇëÖØĞÂÊäÈë;\n");
+            printf("åœ°é›·æ•°å¤ªå¤šäº†ï¼Œæ£‹ç›˜æ”¾ä¸ä¸‹å•¦,è¯·é‡æ–°è¾“å…¥;\n");
         }
         else if (*nummine < 1) {
             system("CLS");
-            printf("²»ÄÜÃ»ÓĞµØÀ×Å¶£¬ÇëÖØĞÂÊäÈë;\n");
+            printf("ä¸èƒ½æ²¡æœ‰åœ°é›·å“¦ï¼Œè¯·é‡æ–°è¾“å…¥;\n");
         }
         else {
             break;
@@ -73,14 +73,14 @@ void setnummine(int* nummine, int* x, int* y) {
     }
 }
 
-//ÓÎÏ·ÉèÖÃ
+//æ¸¸æˆè®¾ç½®
 void set(int* x, int* y, int* nummine) {
     setxy(x, y);
     setnummine(nummine, x, y);
     system("CLS");
 }
 
-//³õÊ¼»¯flagÊı×é
+//åˆå§‹åŒ–flagæ•°ç»„
 void Layflag(int x, int y, char flag[100][100]) {
     for (int i = 1; i <= x; i++) {
         for (int j = 1; j <= y; j++) {
@@ -89,9 +89,9 @@ void Layflag(int x, int y, char flag[100][100]) {
     }
 }
 
-//³õÊ¼»¯µØÀ×µÄÎ»ÖÃ
+//åˆå§‹åŒ–åœ°é›·çš„ä½ç½®
 void Laymines(int x, int y, int nummine, int mine[101][101]) {
-    for (int i = 0; i <= x + 1; i++) {//Ê¹µØÀ×±ê¼ÇÈ«Îª0
+    for (int i = 0; i <= x + 1; i++) {//ä½¿åœ°é›·æ ‡è®°å…¨ä¸º0
         for (int j = 0; j <= y + 1; j++) {
             mine[i][j] = 0;
         }
@@ -101,21 +101,21 @@ void Laymines(int x, int y, int nummine, int mine[101][101]) {
         int a = rand() % x + 1;
         int b = rand() % x + 1;
         printf("%d %d\n", a, b);
-        if (mine[a][b]) continue;//µ±ÒÑ¾­±»±ê¼Ç¹ıµØÀ×Ê±ÍË³ö
+        if (mine[a][b]) continue;//å½“å·²ç»è¢«æ ‡è®°è¿‡åœ°é›·æ—¶é€€å‡º
         else {
-            mine[a][b] = 1;//Î´±»±ê¼Ç¹ıÎ´µØÀ×Ê±£¬±ê¼ÇÎªµØÀ×
-            i++;//µØÀ×Êı¼Ó1;
+            mine[a][b] = 1;//æœªè¢«æ ‡è®°è¿‡æœªåœ°é›·æ—¶ï¼Œæ ‡è®°ä¸ºåœ°é›·
+            i++;//åœ°é›·æ•°åŠ 1;
         }
     }
 }
 
-//³õÊ¼»¯ÓÎÏ·Êı¾İ
+//åˆå§‹åŒ–æ¸¸æˆæ•°æ®
 void Lay(int x, int y, int nummine, char flag[100][100], int mine[101][101]) {
-    Laymines(x, y, nummine, mine);//³õÊ¼»¯10¸öµØÀ×µÄÎ»ÖÃ
-    Layflag(x, y, flag);//³õÊ¼»¯flagÊı×é
+    Laymines(x, y, nummine, mine);//åˆå§‹åŒ–10ä¸ªåœ°é›·çš„ä½ç½®
+    Layflag(x, y, flag);//åˆå§‹åŒ–flagæ•°ç»„
 }
 
-//¼´Ê±´òÓ¡ÓÎÏ·½çÃæ
+//å³æ—¶æ‰“å°æ¸¸æˆç•Œé¢
 void interfaceone(int x, int y, char flag[100][100]) {
     for (int i = 0; i <= x; i++) {
         for (int j = 0; j <= y; j++) {
@@ -134,7 +134,7 @@ void interfaceone(int x, int y, char flag[100][100]) {
     return 0;
 }
 
-//ÖÜÎ§Õ¨µ¯Êı
+//å‘¨å›´ç‚¸å¼¹æ•°
 int numminearound(int a, int b, int mine[101][101]) {
     return mine[a - 1][b - 1] +
         mine[a - 1][b] +
@@ -147,16 +147,16 @@ int numminearound(int a, int b, int mine[101][101]) {
         48;
 }
 
-//½øĞĞÌ½²â
+//è¿›è¡Œæ¢æµ‹
 int detect(int x, int y, int* num, int bl, int mine[101][101], char flag[100][100],int timeDifference) {
     int a, b;
-    if (bl == 2) printf("Õâ¸öÎ»ÖÃÒÑ¾­Ì½²â¹ıÁË£¬ÇëÊäÈëÒ»¸öÎ´Ì½²â¹ıµÄÎ»ÖÃ(%ds):>", timeDifference);
-    else if (bl == 3) printf("Õâ¸öÎ»ÖÃ²»ÔÚÆåÅÌÉÏ,ÇëÖØĞÂÊäÈë(%ds):>", timeDifference);
-    else printf("ÇëÊäÈëÄãÒªÌ½²âµÄÎ»ÖÃ(%ds):>", timeDifference);
+    if (bl == 2) printf("è¿™ä¸ªä½ç½®å·²ç»æ¢æµ‹è¿‡äº†ï¼Œè¯·è¾“å…¥ä¸€ä¸ªæœªæ¢æµ‹è¿‡çš„ä½ç½®(%ds):>", timeDifference);
+    else if (bl == 3) printf("è¿™ä¸ªä½ç½®ä¸åœ¨æ£‹ç›˜ä¸Š,è¯·é‡æ–°è¾“å…¥(%ds):>", timeDifference);
+    else printf("è¯·è¾“å…¥ä½ è¦æ¢æµ‹çš„ä½ç½®(%ds):>", timeDifference);
     if (_kbhit()){
         scanf("%d %d", &a, &b);
         if (a <= x && b <= y && a > 0 && b > 0) {
-            if (mine[a][b]) return 0;//Èç¹ûÓĞÀ×ÔòÍË³ö
+            if (mine[a][b]) return 0;//å¦‚æœæœ‰é›·åˆ™é€€å‡º
             else if (flag[a][b] != 42) return 2;
             else {
                 flag[a][b] = numminearound(a, b, mine);
@@ -169,40 +169,40 @@ int detect(int x, int y, int* num, int bl, int mine[101][101], char flag[100][10
     else return 4;
 }
 
-//¿ªÊ¼ÓÎÏ·
+//å¼€å§‹æ¸¸æˆ
 void game(int x, int y, int nummine) {
     time_t timeStart = time(NULL);
-    int num = x * y - nummine; //Í³¼ÆÎŞÀ×ÇÒÎ´±»Ì½²âµÄ¸ñ×ÓÊı£¬µ±Îª0Ê±ÍË³öÍË³ö£¬´ËÊ±ËùÓĞÎ´Ì½²âµÄµØ·½¶¼ÓĞÀ×
-    char flag[100][100]; //±ê¼ÇÒÑ¾­Ì½²â¹ıµÄÎ»ÖÃ£¬µ±ÒÑ¾­Ì½²â¹ı£¬ÏÔÊ¾ÖÜÎ§µØÀ×Êı£¬·ñÔòÏÔÊ¾*
-    int mine[101][101]; // Í³¼ÆµØÀ×Î»ÖÃ£¬ÓĞÀ×Ê±Îª1£¬ÎŞÀ×Ê±Îª0£»
+    int num = x * y - nummine; //ç»Ÿè®¡æ— é›·ä¸”æœªè¢«æ¢æµ‹çš„æ ¼å­æ•°ï¼Œå½“ä¸º0æ—¶é€€å‡ºé€€å‡ºï¼Œæ­¤æ—¶æ‰€æœ‰æœªæ¢æµ‹çš„åœ°æ–¹éƒ½æœ‰é›·
+    char flag[100][100]; //æ ‡è®°å·²ç»æ¢æµ‹è¿‡çš„ä½ç½®ï¼Œå½“å·²ç»æ¢æµ‹è¿‡ï¼Œæ˜¾ç¤ºå‘¨å›´åœ°é›·æ•°ï¼Œå¦åˆ™æ˜¾ç¤º*
+    int mine[101][101]; // ç»Ÿè®¡åœ°é›·ä½ç½®ï¼Œæœ‰é›·æ—¶ä¸º1ï¼Œæ— é›·æ—¶ä¸º0ï¼›
     int bl = 0;
-    Lay(x, y, nummine, flag, mine); //³õÊ¼»¯ÓÎÏ·Êı¾İ
+    Lay(x, y, nummine, flag, mine); //åˆå§‹åŒ–æ¸¸æˆæ•°æ®
     system("CLS");
     do {
         //test(x,y,mine);
         time_t timeCurrent = time(NULL);
         int timeDifference = difftime(timeCurrent,timeStart);
-        if(bl != 4) interfaceone(x, y, flag); //´òÓ¡ÓÎÏ·½çÃæ
-        printf("(»¹ÓĞ%d¸öÎŞÀ×¸ñ×Ó´ıÌ½²â)", num);
-        bl = detect(x, y, &num, bl, mine, flag, timeDifference); //½øĞĞÉ¨À×ĞĞÎª
+        if(bl != 4) interfaceone(x, y, flag); //æ‰“å°æ¸¸æˆç•Œé¢
+        printf("(è¿˜æœ‰%dä¸ªæ— é›·æ ¼å­å¾…æ¢æµ‹)", num);
+        bl = detect(x, y, &num, bl, mine, flag, timeDifference); //è¿›è¡Œæ‰«é›·è¡Œä¸º
         Sleep(10);
         if (bl == 4) printf("\r"); 
-        else system("CLS");//Çå¿ÕÆÁÄ»
+        else system("CLS");//æ¸…ç©ºå±å¹•
         if (num == 0) break;
     } while (bl);
-    if (bl) printf("*********É¨À×Íê³É**********\n");
+    if (bl) printf("*********æ‰«é›·å®Œæˆ**********\n");
     else print(x, y, mine);
 }
 
 
 int main() {
-    int x = 9;//ÆåÅÌÁĞÊı
-    int y = 9;//ÆåÅÌĞĞÊı
-    int nummine = 10;//µØÀ×Êı
-    int input;//ÊäÈëÑ¡Ôñ
+    int x = 9;//æ£‹ç›˜åˆ—æ•°
+    int y = 9;//æ£‹ç›˜è¡Œæ•°
+    int nummine = 10;//åœ°é›·æ•°
+    int input;//è¾“å…¥é€‰æ‹©
     do {
-        menu(x, y, nummine); //´òÓ¡²Ëµ¥
-        scanf("%d", &input); // ÊäÈëÑ¡ÔñÅĞ¶Ï¼ÌĞøÓÎÏ·»¹ÊÇ½áÊøÓÎÏ·
+        menu(x, y, nummine); //æ‰“å°èœå•
+        scanf("%d", &input); // è¾“å…¥é€‰æ‹©åˆ¤æ–­ç»§ç»­æ¸¸æˆè¿˜æ˜¯ç»“æŸæ¸¸æˆ
         switch (input) {
         case 1:
             system("CLS");
@@ -213,11 +213,11 @@ int main() {
             break;
         case 0:
             system("CLS");
-            printf("ÓÎÏ·ÍË³ö");
+            printf("æ¸¸æˆé€€å‡º");
             break;
         default:
             system("CLS");
-            printf("ÊäÈëÓĞÎó£¬ÖØĞÂÊäÈë;");
+            printf("è¾“å…¥æœ‰è¯¯ï¼Œé‡æ–°è¾“å…¥;");
             break;
         }
     } while (input);
