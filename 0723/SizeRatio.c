@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS  
 #include<stdio.h>
 
-void interchange(int *a, int *b) {
+void swap(int *a, int *b) {
 	*a = *a ^ *b;
 	*b = *b ^ *a;
 	*a = *a ^ *b;
@@ -12,8 +12,8 @@ int sizeratio() {
 	while (scanf("%d %d %d", &a, &b, &c) != EOF) {
 		if (b > a) interchange(&a, &b);
 		if (c > a) {
-			interchange(&b, &c);
-			interchange(&a, &b);
+			swap(&b, &c);
+			swap(&a, &b);
 		}
 		printf("%d %d %d", a ,b, c);
 		break;
