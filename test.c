@@ -1,8 +1,6 @@
-
-#include<stdio.h>
-int main() {
-    int a = 9;
-    int b = 3;
-    printf("%d",a^b);
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    printf("%d",!0);
 }
-//arr[1] + arr[2] + arr[3] + arr[4] +arr[5] >= arr2[5] 
