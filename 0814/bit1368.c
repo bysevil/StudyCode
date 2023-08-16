@@ -5,8 +5,8 @@ int cmp_int(const void* a, const void* b) {
     return *(int*)a - *(int*)b;
 }
 
-int cmp_char(const void* a, const* b) {
-    return *(char*)a - *(char*)b;
+int cmp_char(const void* a, const void* b) {
+    return (int)(*(char*)a - *(char*)b);
 }
 
 int main() {
