@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<string.h>
 
 void swap(char* a, char* b) {
@@ -11,8 +11,7 @@ void reverse(char* str) {
 	int right = strlen(str) - 1;
 	int left = 0;
 	while (left < right) {
-		swap(str + left, str + right);
-		right--; left++;
+		swap(str + left++, str + right--);
 	}
 }
 

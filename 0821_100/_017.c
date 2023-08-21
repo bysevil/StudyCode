@@ -2,10 +2,8 @@
 
 int my_strlen(char* str){
 	int len = 0;
-	while (str[len] != '\0') {
-		len++;
-	}
-	return len;
+	while (str[len++] != '\0') {}
+	return len-1;
 }
 int main() {
 	char str[30];

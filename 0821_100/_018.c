@@ -7,6 +7,6 @@ int my_strlen(char* str){
 int main() {
 	char str[30];
 	scanf("%[^\n]", str);
-	printf("%d",me_strlen(str));
+	printf("%d",my_strlen(str));
 	return 0;
 }
