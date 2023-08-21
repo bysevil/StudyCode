@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int me_strlen(char* str){
+int my_strlen(char* str){
 	if (*str != '\0') return 1 + me_strlen(++str);
 	else return 0;
 }
