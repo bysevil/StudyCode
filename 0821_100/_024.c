@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 void my_strcpy(char* stra, char* strb) {
-	while (*stra != '\0') {
-		*strb = *stra;
-		stra++; strb++;
+	while (*strb++ = *stra++) {
+		if (*strb == '\0') return;
 	}
-	stra = '\0';
+	
 }
 
 int main() {
