@@ -20,8 +20,14 @@ int my_atoi(char *str){
 }
 
 int main(){
-    char* str = "hello-12345world789";
-    printf("%d\n", my_atoi(str));
+    char* str1 = "hello-12345world789";
+    printf("%d\n", my_atoi(str1));
+    char* str2 = "123hello world789";
+    printf("%d\n", my_atoi(str2));
+    char* str3 = "-123hello world789";
+    printf("%d\n", my_atoi(str3));
+    char* str4 = "hello world-789";
+    printf("%d\n", my_atoi(str4));
     return 0;
 }
 
