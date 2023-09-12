@@ -7,7 +7,7 @@ int my_atoi(char *str){
     while(*str && isdigit(*str) == 0) str++;
     if(*str){
         int ans = 0;
-        if(*(str-1) == '-'){
+        if(str-1 != NULL && *(str-1) == '-'){
             while(isdigit(*str)) ans = ans * 10 - *str++ + '0';
         }
         else{
