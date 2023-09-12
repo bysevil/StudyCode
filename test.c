@@ -1,7 +1,8 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-int main() {
-    int i,j = 12;
-    printf("%d %d",i,j);
+int main(){
+    char* str = "1Hello146World";
+    printf("%d",atoi(str));
     return 0;
 }
