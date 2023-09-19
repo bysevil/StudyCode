@@ -1,8 +1,7 @@
 #include<stdio.h>
-#include<stdlib.h>
 
-int main(){
-    char* str = "1Hello146World";
-    printf("%d",atoi(str));
+int main()
+{
+    printf("hello git");
     return 0;
 }
