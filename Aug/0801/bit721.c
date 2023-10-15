@@ -1,3 +1,4 @@
+#include<stdio.h>
 /*输出指定图案*/
 int main(){
     int flag = 1;
