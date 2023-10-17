@@ -1,6 +1,6 @@
 #include<stdio.h>
 
 int main(){
-    printf("hello bit\n");
+    printf("hello C\n");
     return 0;
 }
