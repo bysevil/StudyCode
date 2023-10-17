@@ -1,3 +1,4 @@
 C/.vscode
 Python/HelloPy.py
 C/HelloC.c
+.gitignore
