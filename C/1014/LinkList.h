@@ -6,7 +6,7 @@ typedef int SLTDataType;
 
 typedef struct SListNode
 {
-    int val;
+    SLTDataType val;
     struct SlistNode* next;
 }SLTNode;
 
