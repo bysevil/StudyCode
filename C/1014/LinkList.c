@@ -114,9 +114,10 @@ void SLTErase(SLTNode** pphead, SLTNode* pos) {
         while (tmp) {
             if (tmp->next == pos) {
                 tmp->next = SLTDel(pos);
+                return;
             }
             tmp = tmp->next;
-            return;
+            
         }
         printf("删除失败，未找到pos\n");
     }
