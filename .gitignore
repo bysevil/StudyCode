@@ -3,3 +3,5 @@ C/Hello.c
 .vscode/tasks.json
 CPP/test.cpp
 CPP/test.exe
+C/Hello.exe
+.vscode/launch.json
