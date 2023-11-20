@@ -1,4 +1,6 @@
-#define INIT_CAPACITY 4
+#include<stdio.h>
+#include<assert.h>
+#include<stdlib.h>
 typedef int SLDataType;
 // 动态顺序表 -- 按需申请
 typedef struct SeqList

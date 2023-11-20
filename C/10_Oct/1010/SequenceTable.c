@@ -1,7 +1,4 @@
 #include"SequenceTable.h"
-#include<stdio.h>
-#include<assert.h>
-#include<stdlib.h>
 
 void SLInit(SL* ps) {
     ps->a = NULL;

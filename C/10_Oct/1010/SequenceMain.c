@@ -1,6 +1,6 @@
 #include"SequenceTable.h"
-
 int main() {
+    system("CHCP 65001");
     SL ps;
 
     SLInit(&ps);
@@ -36,5 +36,6 @@ int main() {
 
     SLDestroy(&ps);
     SLPrint(&ps);
+    getchar();
     return 0;
 }
