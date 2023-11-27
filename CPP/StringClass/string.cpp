@@ -97,7 +97,7 @@ void bysevil::string::reserve(size_t n) {
 	if (n > _capacity) {
 		char* tmp = new char[n];
 		if (tmp == nullptr) {
-			std::cout << "¿Õ¼äÉêÇëÊ§°Ü£¬³ÌÐò½áÊø" << std::endl;
+			std::cout << "ç©ºé—´ç”³è¯·å¤±è´¥ï¼Œç¨‹åºç»“æŸ" << std::endl;
 			exit(-1);
 		}
 		if (_size != 0) {
@@ -112,7 +112,7 @@ void bysevil::string::reserve(size_t n) {
 char& bysevil::string::operator[](size_t index)
 {
 	if (index > _size || index < 0) {
-		std::cout << "²»ÕýÈ·µÄÏÂ±êÖµ,³ÌÐò½áÊø" << std::endl;
+		std::cout << "ä¸æ­£ç¡®çš„ä¸‹æ ‡å€¼,ç¨‹åºç»“æŸ" << std::endl;
 		exit(-1);
 	}
 	return _str[index];
@@ -121,7 +121,7 @@ char& bysevil::string::operator[](size_t index)
 const char& bysevil::string::operator[](size_t index) const
 {
 	if (index > _size || index < 0) {
-		std::cout << "²»ÕýÈ·µÄÏÂ±êÖµ,³ÌÐò½áÊø" << std::endl;
+		std::cout << "ä¸æ­£ç¡®çš„ä¸‹æ ‡å€¼,ç¨‹åºç»“æŸ" << std::endl;
 		exit(-1);
 	}
 	return _str[index];
@@ -206,7 +206,7 @@ bysevil::string& bysevil::string::insert(size_t pos, char c)
 bysevil::string& bysevil::string::insert(size_t pos, const char* str)
 {
 	if (pos > _size) {
-		std::cout << "²åÈëÎ»ÖÃµÄÏÂ±ê³¬³öË÷Òý£¬³ÌÐò½áÊø" << std::endl;
+		std::cout << "æ’å…¥ä½ç½®çš„ä¸‹æ ‡è¶…å‡ºç´¢å¼•ï¼Œç¨‹åºç»“æŸ" << std::endl;
 		exit(-1);
 	}
 	size_t slen = strlen(str);
@@ -222,7 +222,7 @@ bysevil::string& bysevil::string::erase(size_t pos, size_t len)
 {
 	if (len == 0) return *this;
 	if (pos >= _size) {
-		std::cout << "É¾³ýÎ»ÖÃµÄÏÂ±ê³¬³öË÷Òý£¬³ÌÐò½áÊø" << std::endl;
+		std::cout << "åˆ é™¤ä½ç½®çš„ä¸‹æ ‡è¶…å‡ºç´¢å¼•ï¼Œç¨‹åºç»“æŸ" << std::endl;
 		exit(-1);
 	}
 	if (pos + len < _size) {
