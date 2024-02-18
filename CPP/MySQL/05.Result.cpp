@@ -56,6 +56,7 @@ int main(){
 
     //输出列属性
     for(int i = 0; i < fields; i++){
+        //输出列名
         std::cout << field[j].name << ' ';
     }
     std::cout << std::endl;
