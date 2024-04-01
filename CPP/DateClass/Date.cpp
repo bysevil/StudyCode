@@ -15,7 +15,7 @@ Date::Date(int year, int month, int day){
 		_day = day;
 	}
 	else {
-		std::cout << "日期非法" << std::endl;
+		std::cout << "鏃ユ湡闈炴硶" << std::endl;
 	}
 }
 
